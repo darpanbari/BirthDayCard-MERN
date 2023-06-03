@@ -1,0 +1,49 @@
+.background-image {
+  background-image: url('../public/back0.png');
+  height: 100%;
+  width: 90vw;
+  background-size: cover;
+  background-position: center;
+  padding: 20px;
+}
+
+.background-image-2{
+  background-image: url('../public/back-user3.png');
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  
+}
+
+.css-19kzrtu {
+  padding: 0px !important;
+}
+
+.text{
+  color: #000!important;
+  background-color: #E3F4F4!important;
+  border-radius: 0% 12% 0% 12%;
+}
+
+.MuiTabs-scroller{
+  z-index: 5 !important;
+  width: 150px !important;
+  margin-right: 0px !important;
+  background-color: #116D6E;
+}
+.MuiButtonBase-root .text{
+  color: #E3F4F4 !important;
+}
+
+.css-1h9z7r5-MuiButtonBase-root-MuiTab-root.Mui-selected {
+  color: #60B99D !important;
+  border-right: 5px solid #60B99D !important;
+}
+
+.css-1h9z7r5-MuiButtonBase-root-MuiTab-root {
+  color: #dffff5 !important;
+}
+
+.css-ahj2mt-MuiTypography-root {
+  font-size: 11px !important;
+}
