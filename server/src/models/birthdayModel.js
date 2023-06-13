@@ -9,6 +9,12 @@ const birthdaySchema = new mongoose.Schema({
     type: Date,
     required: true,
   },
+  email:{
+    type: String,
+  },
+  role:{
+    type: String,
+  }
 });
 
 export default mongoose.model("birthday", birthdaySchema);

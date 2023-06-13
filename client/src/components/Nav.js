@@ -1,11 +1,13 @@
-import * as React from 'react';
-import PropTypes from 'prop-types';
-import Tabs from '@mui/material/Tabs';
-import Tab from '@mui/material/Tab';
-import Typography from '@mui/material/Typography';
-import Box from '@mui/material/Box';
-import AdminDashboard from '../pages/AdminDashboard';
-import UserDashboard from '../pages/UserDashboard';
+import * as React from "react";
+import PropTypes from "prop-types";
+import Tabs from "@mui/material/Tabs";
+import Tab from "@mui/material/Tab";
+import Typography from "@mui/material/Typography";
+import Box from "@mui/material/Box";
+import AdminDashboard from "../pages/AdminDashboard";
+import UserDashboard from "../pages/UserDashboard";
+import JoiningAdmin from "../pages/joiningAdmin";
+import JoiningUser from "../pages/JoiningUser";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -36,7 +38,7 @@ TabPanel.propTypes = {
 function a11yProps(index) {
   return {
     id: `vertical-tab-${index}`,
-    'aria-controls': `vertical-tabpanel-${index}`,
+    "aria-controls": `vertical-tabpanel-${index}`,
   };
 }
 
@@ -49,7 +51,12 @@ export default function VerticalTabs() {
 
   return (
     <Box
-      sx={{ flexGrow: 1, bgcolor: 'background.paper', display: 'flex', height: '100vh' }}
+      sx={{
+        flexGrow: 1,
+        bgcolor: "background.paper",
+        display:"flex",
+        height: "100vh",
+      }}
     >
       <Tabs
         orientation="vertical"
@@ -57,27 +64,27 @@ export default function VerticalTabs() {
         value={value}
         onChange={handleChange}
         aria-label="Vertical tabs example"
-        sx={{ borderRight: 1, borderColor: 'divider' }}
+        sx={{ borderRight: 1, borderColor: "divider" }}
       >
-        <Tab label="Admin" {...a11yProps(0)}/>
+        <Tab label="Admin" {...a11yProps(0)} />
         <Tab label="User" {...a11yProps(1)} />
-        <Tab label="Item Three" {...a11yProps(2)} />
-        <Tab label="Item Four" {...a11yProps(3)} />
+        <Tab label="j Admin" {...a11yProps(2)} />
+        <Tab label="j User" {...a11yProps(3)} />
         <Tab label="Item Five" {...a11yProps(4)} />
         <Tab label="Item Six" {...a11yProps(5)} />
         <Tab label="Item Seven" {...a11yProps(6)} />
       </Tabs>
       <TabPanel value={value} index={0}>
-      <AdminDashboard/>
+        <AdminDashboard />
       </TabPanel>
       <TabPanel value={value} index={1}>
-      <UserDashboard/>
+        <UserDashboard />
       </TabPanel>
       <TabPanel value={value} index={2}>
-      Item Three
+        <JoiningAdmin />
       </TabPanel>
       <TabPanel value={value} index={3}>
-        Item Four
+        <JoiningUser />
       </TabPanel>
       <TabPanel value={value} index={4}>
         Item Five

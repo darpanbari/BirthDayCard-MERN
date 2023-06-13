@@ -1,5 +1,5 @@
 .background-image {
-  background-image: url('../public/back0.png');
+  background-image: url("../public/back0.png");
   height: 100%;
   width: 90vw;
   background-size: cover;
@@ -7,37 +7,58 @@
   padding: 20px;
 }
 
-.background-image-2{
-  background-image: url('../public/back-user3.png');
+.background-image-2 {
+  background-image: url("../public/back-user3.png");
   width: 100%;
   background-size: cover;
   background-position: center;
-  
 }
+
+/* nav */
+
+.list-group-item{
+  height: 60px;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  padding: 0px 50px !important;
+  border-bottom: 2px solid rgba(0, 169, 169, 0.133) !important;
+  background-color: #116d6e !important;
+  color: #c3fff2 !important;
+}
+
+.list-group-item.active{
+  background-color: #c3fff2 !important;
+  border: 0px !important;
+  font-weight: bolder !important;
+  color: #00a6a9 !important;
+  border-right: 4px solid #00a6a9 !important;
+}
+
 
 .css-19kzrtu {
   padding: 0px !important;
 }
 
-.text{
-  color: #000!important;
-  background-color: #E3F4F4!important;
+.text {
+  color: #000 !important;
+  background-color: #e3f4f4 !important;
   border-radius: 0% 12% 0% 12%;
 }
 
-.MuiTabs-scroller{
+.MuiTabs-scroller {
   z-index: 5 !important;
   width: 150px !important;
   margin-right: 0px !important;
-  background-color: #116D6E;
+  background-color: #116d6e;
 }
-.MuiButtonBase-root .text{
-  color: #E3F4F4 !important;
+.MuiButtonBase-root .text {
+  color: #e3f4f4 !important;
 }
 
 .css-1h9z7r5-MuiButtonBase-root-MuiTab-root.Mui-selected {
-  color: #60B99D !important;
-  border-right: 5px solid #60B99D !important;
+  color: #60b99d !important;
+  border-right: 5px solid #60b99d !important;
 }
 
 .css-1h9z7r5-MuiButtonBase-root-MuiTab-root {
@@ -47,3 +68,20 @@
 .css-ahj2mt-MuiTypography-root {
   font-size: 11px !important;
 }
+
+
+/* joining */
+.joining-image{
+  background-image: url("../public/joining-img.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 400px !important;
+  width: 100% !important;
+
+}
+
+@media only screen and (max-width: 1000px) {
+.container-res{
+    flex-direction: column;
+}
+  }

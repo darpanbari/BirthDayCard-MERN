@@ -1,20 +1,27 @@
-import join from "../models/JoiningDateModel.js";
+import joinDate from "../models/JoiningDateModel.js";
 
 export const getJoiningDate = async (req, res) => {
   
   try {
-    const joinDate = req.params.joinnDate;
-    const birthdayList = await join.find({ joiningDate: joinDate });
+    const fromDate = req.params.fromDate;
+    const toDate = req.params.toDate;
+
+    const data = await joinDate.find({
+      joiningDate: {
+        $gte: fromDate,
+        $lte: toDate
+      }
+    });
     res.status(200).json({
       success: true,
-      message: "Successfully get birthday list",
-      data: birthdayList,
+      message: "Successfully get",
+      data,
     });
   } 
   catch (error) {
     res.status(500).json({
       success: false,
-      error,
+      err: error.message,
     });
   }
 };

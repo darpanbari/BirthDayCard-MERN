@@ -12,11 +12,8 @@ const AdminDashboard = () => {
   useEffect(() => {
     const fetchData = async () => {
 
-      const currentMonth = moment().format("M");
-      console.log(currentMonth);
-
-      const fromDate = `2023-${currentMonth}-01`;
-      const toDate = `2023-${currentMonth}-30`;
+      const fromDate = moment().startOf("month").format("YYYY-MM-DD");
+      const toDate = moment().endOf("month").format("YYYY-MM-DD");
       console.log(fromDate);
 
       try {
@@ -64,10 +61,10 @@ const AdminDashboard = () => {
                           }}
                         />
                         <Card.Body className="p-0">
-                          <Card.Title className="text-center shadow-sm py-1" style={{color:"#B8E7E1"}}>
+                          <Card.Title className="text-center shadow-sm py-1" style={{color:"#E3F4F4"}}>
                             {b.name}
                           </Card.Title>
-                          <Card.Text className="text-center fst-italic text-white my-2">
+                          <Card.Text className="text-center fst-italic my-2" style={{ color: "#B8E7E1" }}>
                             It,s Your Special Day !
                           </Card.Text>
                           <Card.Text className="text-center fw-bold" style={{color:"#116D6E"}}>
